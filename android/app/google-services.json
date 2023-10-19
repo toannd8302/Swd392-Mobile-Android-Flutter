@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "585113222052",
+    "project_id": "intern-system-management",
+    "storage_bucket": "intern-system-management.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585113222052:android:4d45e4ab65ebefa40e9f31",
+        "android_client_info": {
+          "package_name": "com.example.fltter_30days"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "585113222052-5c40a4dk9cr390q9shhr25p3u6n0ib23.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fltter_30days",
+            "certificate_hash": "5bc63c9137510c56d45d293c4b9eea2bd65a4189"
+          }
+        },
+        {
+          "client_id": "585113222052-sodfkh32e02pfb7q8u0rhlhtobfgm88b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9jSnM9fMvTTgQ-M-ul4wlITrxpgsFSJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "585113222052-sodfkh32e02pfb7q8u0rhlhtobfgm88b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
