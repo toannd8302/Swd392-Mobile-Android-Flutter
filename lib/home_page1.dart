@@ -149,7 +149,8 @@ class _MyWidgetState extends State<MyHomePage1> {
                                     '${project.projectName}',
                                     style: TextStyle(
                                       fontSize: 25,
-                                      fontWeight: FontWeight.bold,
+                                      fontFamily: "Seoge UI",
+                                      
                                      
                                     ),
                                   ),

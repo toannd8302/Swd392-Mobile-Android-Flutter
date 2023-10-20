@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:fltter_30days/models/attendance_model.dart';
 import 'package:fltter_30days/models/intern_model.dart';
 import 'package:fltter_30days/models/intern_project_model.dart';
 import 'package:fltter_30days/models/project_model.dart';
@@ -149,6 +150,29 @@ class ApiService {
       return Project.fromJson(projectJson);
     } else {
       throw Exception('Failed to fetch project ${response.statusCode}');
+    }
+  }
+
+    // ========================= ATTENDANCE API ==============================
+  static Future<List<AttendanceModel>> fetchAttendanceApi(String id) async {
+    print(id);
+    final url = Uri.parse('${baseUrl}/attendances/intern?id=${id}');
+    print(url);
+    print(jwtToken);
+    final response = await http.get(
+      url,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer $jwtToken',
+      },
+    );
+    print(response.statusCode);
+     if (response.statusCode == 200) {
+    final List<dynamic> attendanceApi = json.decode(response.body);
+    return attendanceApi.map((attendance) => 
+    AttendanceModel.fromJson(attendance)).toList();
+  } else {
+      throw Exception('Failed to fetch attendance ${response.statusCode}');
     }
   }
 

@@ -29,9 +29,9 @@ class _EditInformationPageState extends State<EditInformationPage> {
     _getDownloadUrl();
     fullNameController.text = widget.intern.fullName;
     universityController = widget.intern.university;
-    //selectedDate =
-    //widget.intern.dob != null ? DateTime.parse(widget.intern.dob) : null;
-    // Giá trị giới tính được chọn mặc định
+    selectedDate =
+    widget.intern.dob != null ? DateTime.parse(widget.intern.dob) : null;
+    //Giá trị giới tính được chọn mặc định
     selectedGender = widget.intern.gender;
     phoneNumberController.text = widget.intern.phoneNumber;
 
@@ -174,12 +174,14 @@ class _EditInformationPageState extends State<EditInformationPage> {
                         ),
                       ),
                     ),
+
                     Container(
                       margin: EdgeInsets.only(top: 15),
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.grey),
                         borderRadius: BorderRadius.circular(10.0),
                       ),
+                     
                       child: ListTile(
                         title: Text('Date of Birth'),
                         subtitle: selectedDate != null

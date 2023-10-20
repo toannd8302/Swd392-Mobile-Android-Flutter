@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           colorScheme: lightColorScheme,
           textTheme: TextTheme(
+              
               titleLarge: TextStyle(
             fontSize: 48,
           ))),

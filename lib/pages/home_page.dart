@@ -1,5 +1,6 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:fltter_30days/home_page1.dart';
+import 'package:fltter_30days/pages/attendance_page.dart';
 import 'package:fltter_30days/pages/profile_content_page.dart';
 import 'package:fltter_30days/pages/schedule_page.dart';
 
@@ -41,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _navigateToPage(int pageIndex) {
     _pageController.animateToPage(pageIndex,
-        duration: Duration(milliseconds: 10), curve: Curves.easeInOut);
+        duration: Duration(milliseconds: 1), curve: Curves.easeInOut);
   }
 
   @override
@@ -110,13 +111,14 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               MyHomePage1(internId: ApiService.currentUserId),
               scheduleContentPage(),
-              scheduleContentPage(),
+              AttendanceReportPage(internId: ApiService.currentUserId),
               // NotificationPage(),
               profileContentPage(),
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
             backgroundColor: Theme.of(context).colorScheme.onPrimary,
+            type: BottomNavigationBarType.fixed,
             items: [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
@@ -145,6 +147,9 @@ class _MyHomePageState extends State<MyHomePage> {
             onTap: _navigateToPage,
             selectedItemColor: Theme.of(context).colorScheme.primary,
             unselectedItemColor: Colors.grey,
+            // showSelectedLabels: false,
+            // showUnselectedLabels: false,
+            elevation: 0,
           ),
         ),
       ),

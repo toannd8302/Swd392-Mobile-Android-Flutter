@@ -282,31 +282,31 @@ class _LoginPageState extends State<LoginPage> {
                                   });
                                 },
                                 child: Container(
+                                  width: MediaQuery.of(context).size.width *
+                                      0.8, // Chiều rộng của tùy chọn
                                   margin: EdgeInsets.all(10.0),
                                   padding: EdgeInsets.all(10.0),
                                   decoration: BoxDecoration(
-                                    color: Colors.white, // Màu nền của tùy chọn
+                                    color: Theme.of(context).colorScheme.surfaceVariant, // Màu nền của tùy chọn
                                     borderRadius: BorderRadius.circular(
-                                        5.0), // Bo tròn viền
-                                    boxShadow: [
-                                      // Đổ bóng cho tùy chọn
-                                      BoxShadow(
-                                        color: Colors.grey.withOpacity(0.3),
-                                        spreadRadius: 5,
-                                        blurRadius: 7,
-                                        offset: Offset(0,
-                                            3), // thay đổi vị trí của đổ bóng
-                                      )
-                                    ],
+                                        20.0), // Bo tròn viền
+                                   
                                   ),
-                                  child: Row(
-                                    children: [
-                                      Image.asset(
-                                        'lib/assets/images/google_logo.png',
-                                        width: 24,
-                                        height: 24,
-                                      ),
-                                    ],
+                                  child: Container(
+                                    margin: EdgeInsets.only(left: 50.0),
+                                    child: Row(
+                                      children: [
+                                        Image.asset(
+                                          'lib/assets/images/google_logo.png',
+                                          width: 24,
+                                          height: 24,
+                                        ),
+                                        SizedBox(
+                                          width: 10.0,
+                                        ),
+                                        Text('Login with Google'),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
