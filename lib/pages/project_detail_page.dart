@@ -44,10 +44,14 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.primary,
         title: Text(
           'Project Detail',
           style: TextStyle(
-            color: Theme.of(context).colorScheme.primary,
+            fontFamily: 'Seoge UI',
+            fontSize: 20,
+            color: Theme.of(context).colorScheme.onPrimary,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -79,6 +83,7 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
+                          padding: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             color: Theme.of(context).colorScheme.primary,
                             borderRadius: BorderRadius.only(
@@ -97,13 +102,15 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                           ),
                         ),
 
-                        Text('Project Description: ${projectDetail.desc}',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                        ),),  
-                        
+                        Text(
+                          'Project Description: ${projectDetail.desc}',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                        ),
+
                         // Thêm thông tin chi tiết khác của dự án
                       ],
                     ),

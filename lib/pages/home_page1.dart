@@ -40,13 +40,13 @@ class _MyWidgetState extends State<MyHomePage1> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: NetworkImage(imgUrl),
-              fit: BoxFit
-                  .cover, // Phù hợp và che đầy toàn bộ kích thước của Container
-            ),
-          ),
+          // decoration: BoxDecoration(
+          //   image: DecorationImage(
+          //     image: NetworkImage(imgUrl),
+          //     fit: BoxFit
+          //         .cover, // Phù hợp và che đầy toàn bộ kích thước của Container
+          //   ),
+          // ),
           child: FutureBuilder<List<InternProject>>(
             future: _internProjectFuture,
             builder: (context, snapshot) {
@@ -75,7 +75,7 @@ class _MyWidgetState extends State<MyHomePage1> {
                       Text(
                         'You has ${projects.length} project in progress',
                         style: TextStyle(
-                          color: Theme.of(context).colorScheme.error,
+                          color: Theme.of(context).colorScheme.onBackground,
                         ),
                       ),
                       Container(
@@ -93,7 +93,6 @@ class _MyWidgetState extends State<MyHomePage1> {
                           borderRadius: BorderRadius.circular(20),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
                               spreadRadius: 2,
                               blurRadius: 1,
                             ),
@@ -112,7 +111,7 @@ class _MyWidgetState extends State<MyHomePage1> {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
-                          color: Theme.of(context).colorScheme.error,
+                          color: Theme.of(context).colorScheme.onBackground,
                         ),
                       ),
                       Padding(
@@ -135,14 +134,15 @@ class _MyWidgetState extends State<MyHomePage1> {
                                 ),
                                 decoration: BoxDecoration(
                                  
-                                  borderRadius: BorderRadius.circular(20),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.grey.withOpacity(0.5),
-                                      spreadRadius: 2,
-                                      blurRadius: 1,
-                                    ),
-                                  ],
+                                    color:Color(0xFF86FAB0),
+                                  
+                                  borderRadius: BorderRadius.circular(5),
+                                  // boxShadow: [
+                                  //   BoxShadow(
+                                  //     spreadRadius: 2,
+                                  //     blurRadius: 1,
+                                  //   ),
+                                  // ],
                                 ),
                                 child: ListTile(
                                   title: Text(
@@ -150,11 +150,10 @@ class _MyWidgetState extends State<MyHomePage1> {
                                     style: TextStyle(
                                       fontSize: 25,
                                       fontFamily: "Seoge UI",
-                                      
-                                     
+                                      color: Color(0xFF00210F)
                                     ),
+                                    textAlign: TextAlign.center,
                                   ),
-                                  
                                 ),
                               ),
                             );

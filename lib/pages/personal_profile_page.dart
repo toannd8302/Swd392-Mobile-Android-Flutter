@@ -58,7 +58,7 @@ class _InformationProfilePageState extends State<InformationProfilePage> {
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: Colors.black,
+              color: Theme.of(context).colorScheme.onBackground,
             ),
           ),
           Text(
@@ -78,13 +78,16 @@ class _InformationProfilePageState extends State<InformationProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Personal Profile',
+      
       style: TextStyle(
-        color: Theme.of(context).colorScheme.onBackground,
+        color: Theme.of(context).colorScheme.onPrimary,
         fontSize: 20,
         fontWeight: FontWeight.bold,
         fontFamily: "Seoge UI"
-        )
-      )),
+        ),
+      ),
+      backgroundColor: Theme.of(context).colorScheme.primary,
+      ),
 
       body: Container(
        
@@ -121,7 +124,13 @@ class _InformationProfilePageState extends State<InformationProfilePage> {
                     SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: _updateInternData,
-                      child: Text('Edit Information'),
+                      child: Text('Edit Information',
+                      
+                      style: TextStyle(
+                        fontFamily: 'Seoge UI',
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),),
                     ),
                   ],
                 ),

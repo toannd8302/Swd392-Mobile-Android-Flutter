@@ -1,5 +1,5 @@
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:fltter_30days/home_page1.dart';
+import 'package:fltter_30days/pages/home_page1.dart';
 import 'package:fltter_30days/pages/attendance_page.dart';
 import 'package:fltter_30days/pages/profile_content_page.dart';
 import 'package:fltter_30days/pages/schedule_page.dart';

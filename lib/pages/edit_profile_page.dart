@@ -104,14 +104,7 @@ class _EditInformationPageState extends State<EditInformationPage> {
           flexibleSpace: Center(
             child: Container(
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFF39b6ee),
-                    Color(0xFF1c62cf),
-                  ],
-                  begin: Alignment.topRight,
-                  end: Alignment.topLeft,
-                ),
+              color: Theme.of(context).colorScheme.primary,
               ),
             ),
           ),

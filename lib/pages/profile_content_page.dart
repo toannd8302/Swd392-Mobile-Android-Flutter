@@ -38,10 +38,11 @@ class _profileContentPageState extends State<profileContentPage> {
       print('Error loading user info: $e');
     }
   }
- @override
+
+  @override
   Widget build(BuildContext context) {
     return WillPopScope(
-        // Xử lý logic ở đây, trả về true nếu bạn muốn cho phép thoát, và false nếu bạn muốn ngăn người dùng thoát
+      // Xử lý logic ở đây, trả về true nếu bạn muốn cho phép thoát, và false nếu bạn muốn ngăn người dùng thoát
       onWillPop: () async => false,
       child: Scaffold(
         body: ListView(
@@ -51,8 +52,9 @@ class _profileContentPageState extends State<profileContentPage> {
               padding: const EdgeInsets.all(16),
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [Color(0xFF39b6ee),
-              Color(0xFF1c62cf),],
+                  colors: [
+                    Colors.lightGreen, Colors.cyan,
+                  ],
                   begin: Alignment.topRight,
                   end: Alignment.topLeft,
                 ),
@@ -115,7 +117,8 @@ class _profileContentPageState extends State<profileContentPage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => InformationProfilePage(
-                          interId: ApiService.currentUserId,role: ApiService.role),
+                          interId: ApiService.currentUserId,
+                          role: ApiService.role),
                     ),
                   );
                 },
@@ -127,7 +130,6 @@ class _profileContentPageState extends State<profileContentPage> {
                 ),
               ),
             ),
-           
             Container(
               margin: const EdgeInsets.only(top: 5),
               child: ListTile(
@@ -138,9 +140,7 @@ class _profileContentPageState extends State<profileContentPage> {
                 title: const Text('Company Introduction'),
                 trailing: const Icon(Icons.arrow_forward_ios),
                 onTap: () {
-                
-                
-                  Navigator.pushNamed(context, "/introduction/" );
+                  Navigator.pushNamed(context, "/introduction/");
                 },
                 iconColor: Colors.white,
                 textColor: Colors.white,
